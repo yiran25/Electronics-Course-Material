@@ -1,0 +1,46 @@
+1. Microcontroller has more tha microprocessor, almost like a computer 
+
+2. How to program a microcontroller: Write to general purpose registers 
+
+3. Ardruino  
+
+	- Arduino IDE & libraries can be used in different microcontroller platforms  
+
+	- Teensy (ARM), Arduino (Atmel), STM32 (ARM), ESP32 (RISC) 
+
+	- ESP32: 
+
+		Two cores for parallel processing 
+
+		18 ADCs 
+
+		3 SPIs: communicate with sensors 
+
+		15 PWM output 
+
+		2 DAC 
+
+		2 I2S: sensing (detect lick) 
+
+		Wifi & bluetooth  
+
+4. Installation 
+
+	- Preference --> add the board url --> tool --> board manager --> find your board --> install 
+
+	- Install library: sketch --> include library --> search for library --> install 
+
+	- Open arduino from terminal: open /Applications/Arduino 2.app 
+
+5. Arduino script: 
+
+	#include libraries 
+
+	Declare objects 
+	
+	Declare global variables 
+
+	setup() function 
+
+	loop() function 
+6. Example: Control LED via bluetooth from Chrome: https://github.com/jasoncoon/esp32-fastled-ble

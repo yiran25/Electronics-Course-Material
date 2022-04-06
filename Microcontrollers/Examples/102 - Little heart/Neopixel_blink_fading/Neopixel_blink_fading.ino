@@ -21,7 +21,7 @@
 // strandtest example for more information on possible values.
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
-#define DELAYVAL 200 // Time (in milliseconds) to pause between pixels
+#define DELAYVAL 20 // Time (in milliseconds) to pause between pixels
 
 void setup() {
   // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
@@ -44,31 +44,26 @@ void loop()
 
   for(int j=0; j<LOOPNUM; j++)
   {
-    for(int i=0; i<NUMPIXELS; i++) 
+    for(int i=0; i<255; i++) 
     {
   
       // pixels.Color() takes RGB values, from 0,0,0 up to 255,255,255
       // Here we're using a moderately bright green color:
     
-        pixels.setPixelColor(i, pixels.Color(50, 0, 0));
+        pixels.setPixelColor(0, pixels.Color(i, 0, 0));
         pixels.show();
         delay(DELAYVAL); 
-   
-        pixels.setPixelColor(i, pixels.Color(0, 50, 0));
-        pixels.show();  
-        delay(DELAYVAL); 
-  
-        pixels.setPixelColor(i, pixels.Color(0, 0, 50));
-        pixels.show();   
-        delay(DELAYVAL); 
+
     }
+    
   }
 
   // How to stop after blinking the color?
   while (1)
   {
-    pixels.clear();
-    //pixels.setPixelColor(1, pixels.Color(0, 0, 0));
+    //pixels.clear();
+    pixels.setPixelColor(0, pixels.Color(0,0,0));
+    pixels.show();
   }
   
 }
